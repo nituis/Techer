@@ -1,0 +1,761 @@
+/*
+mobile view problem
+image
+
+/*general -------------------------------------------------------------------*/
+
+	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+			margin: 0;
+			padding: 0;
+			border: 0;
+		}
+
+	html {
+		/*background-color: #E8E9E9; /*edit*/
+		background-color: rgb(112,165, 197);
+		font-family: "Times New Roman", Times, serif;
+			margin: 0;
+			padding: 0;
+			border: 0;
+			overflow-x: hidden; 
+	}
+
+	body{
+		/*z-index:-1;*/	
+		overflow-x: hidden; 	
+	}
+	
+	a {
+		font-family: Impact, Charcoal, sans-serif;
+		font-size: 19px;
+		text-decoration: none;	
+		color: #5F5F5F;
+	}
+
+	a:hover {
+		color: #000099;	/*edit*/
+	}
+
+/*button setting need edit*/
+	button {
+		background-color: white;
+		border: 2px solid grey; /*edit*/
+		
+	}
+
+	button:after {
+		border: 2px solid blue; /*edit*/
+		
+	}
+
+	button:hover {
+		border: 2px solid orange; /*edit*/
+		
+	}
+
+	.slide {
+		padding: 5% 0%;
+		width: 100%;
+		margin: 0;
+		border: 0;
+		min-height: 700px;
+	}
+
+
+	.row-1 {	
+		padding: 0 0;		
+	}
+	.row-1 > p{
+		font-weight: bold;
+	}
+	
+	
+	.slide  h1{
+		margin: 20px 0;
+	}
+	
+
+	.row-2 {
+		padding-bottom: 4%;
+	}
+
+	.title, .subtitle {
+		color: white;
+		font-family: "Arial", Helvetica, sans-serif;
+		text-align: center;
+		font-size: 150%;
+	}
+
+	.title {
+		font-size: 40px;
+	}
+
+	.subtitle {
+		font-size: 25px;
+	}
+
+	p {
+		color: white;
+		text-align: center;
+		font-size: 20px;
+	}
+
+
+
+/* specific -------------------------------------------------------*/
+
+/* menu-bar */
+	.menu-bar {
+		position: fixed;
+		width: 100%; 
+		margin: 0;
+		background-color: rgba(232, 233, 233, 0.85);
+		/*#E8E9E9; /*same with html background color*/
+		/*opacity: 0.85;*/
+		z-index: 100;
+	}
+	
+	#home {
+		height: 40px;
+		width: 100px;
+		float: left;
+		padding: 0.5% 1%;
+	}
+
+	.navLink { 
+		margin-left: auto;
+		margin-right: auto;
+		width: 70%;
+		margin-top: 20px;
+	}
+
+
+	.topLi {
+		text-align: center;
+		position: static;
+		list-style-type: none;
+		display: inline;
+		padding: 0% 2.5%;
+		color: white;
+	}
+	
+/* mobile menu bar*/
+	
+	.mini{	
+		float:right;
+		visibility: hidden;		
+	}
+
+		
+	/* Dropdown Button */
+	.dropbtn {
+		background-color: rgba(167, 167, 167, 0.9);
+		color: white;
+		padding: 16px;
+		font-size: 16px;
+		border: none;
+		cursor: pointer;
+		
+		width: 30px;
+		border-radius: 10px;
+		z-index: 1000;
+	}
+	
+	/* Dropdown button on hover & focus */
+	.dropbtn:hover, .dropbtn:focus {
+		background-color: rgba(89, 89, 89, 0.9)
+	}
+
+	/* The container <div> - needed to position the dropdown content */
+	.dropdown {
+		position: relative;
+		display: inline-block;
+		
+		z-index: 5;
+		
+	}
+
+	/* Dropdown Content (Hidden by Default) */
+	.dropdown-content {
+		display: none;
+		/*position: absolute;*/
+		background-color: #f9f9f9;
+		/*min-width: 160px;*/
+		overflow: auto;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		
+	}
+
+	/* Links inside the dropdown */
+	.dropdown-content a {
+		color: black;
+		padding: 12px 16px;
+		text-decoration: none;
+		display: block;		
+	}
+
+	/* Change color of dropdown links on hover */
+	.dropdown-content a:hover {background-color: #f1f1f1}
+
+	/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+	.show {display:block;}
+
+	.menubar2{
+		background-color: white;
+		opacity:1;					
+	}
+
+	.mini2{
+		background-color: rgba(255, 255, 255, 1);
+		width: 100%;		
+	}
+	
+	.homelogodiv2 img{		
+		visibility: visible;
+		
+	}
+
+	.menuicon a{
+		color: white;
+	}
+
+
+/* slide 1 */
+	#slide-1 {
+		padding-top: 5%;
+		padding-bottom: 0%;	
+		background-image: url("images/bg1.jpg");
+		background-repeat: no-repeat;
+		background-position: center top;
+	}
+
+	#cover {
+		margin: auto;
+		width: 30%;
+		padding: 0 35%;
+		
+	}
+	
+	#slide1title {
+		color: black;
+		font-family: "Arial", Helvetica, sans-serif;
+		text-align: center;
+		font-size: 150%;
+		text-shadow: 2px 2px 4px #fff;
+	}
+
+	.row-2-1 {
+		display: inline-block;
+		width: 49%;
+		margin: 0 0.25%;
+	}
+
+	.complexButton {
+		display: inline-block;
+		margin: 0 25%;
+		width: 50%;	
+	}
+
+	.floatingButton {
+		overflow: hidden;
+		margin-top: 50px;
+		padding-top: 30px;
+		transition: all ease-in-out .5s;
+	}
+
+	.floatingButton:hover {
+		padding-top: 0px; 
+		padding-bottom: 30px;
+	}
+
+	
+	
+	.login {
+		margin: 0 40%;
+		width: 20%;
+		text-shadow: 1px 1px 3px #fff;
+	}
+
+	.loginText {
+		font-family: "Arial", Helvetica, sans-serif;
+		font-size: 20px; 
+		text-shadow: 1px 1px 3px #fff;
+		color: black;
+		font-weight: bold;
+	}
+
+
+
+
+/* slide 2 */
+	#slide-2 {
+		background-color: #CB2728;/*#006699;/*#ff9f80;#801B1B; /*#7D0224;;  /*edit*/
+		/*color: #CB2728;/*#e6e6e6;*/
+	}
+
+	#slide-2 h1{	
+		margin: 
+	}
+	
+	.row-4 {
+		display: inline-block;
+		width: 100%;
+		height: 100%;
+		vertical-align: middle;
+	}
+	
+	#leftP, #leftImg {
+		float: left;
+
+	}
+
+	#rightP, #rightImg {
+		float: right;
+	}
+
+	#leftImg, #rightImg {
+		display: inline;
+		max-height: 250px;
+		max-width: 250px;
+		width: 18%;
+		
+		border-radius: 50%;
+		overflow: hidden;
+	}
+	
+	#leftImg{
+		margin: 0% 4% 0 10%;
+	}
+	#rightImg{
+		margin: 0% 10% 0 4%;
+	}
+	
+	#rightP {
+		border-top-left-radius:100px;
+		border-bottom-left-radius: 100px;
+		padding: 2% 10% 2% 3%;
+		margin: 3% 0;
+		
+		vertical-align: middle;
+	}
+	
+	#leftP{
+		border-top-right-radius:100px;
+		border-bottom-right-radius: 100px;
+		padding-left: 10%;
+		padding-right: 10px;
+		margin: 3% 0;
+		
+	}
+
+	.pBesideCircleImg{
+		display: inline;
+		width: 55%;
+		text-align: left;
+		padding: 2% 5%;
+		
+		font-size: 1.5em; 
+		font-weight: bold; 
+		margin: 0 auto;
+		
+		color: #CB2728;/*#0d0d0d;*/
+		background-color: #f2f2f2;
+		/*background-color: rgb(255, 211, 229);	*/
+	} 
+	
+/* slide 3 */
+	#slide-3 {
+		background-color: #1ABC9C;  /*edit	255 158 17*/
+	}
+
+	.cell {
+		display: inline-block;
+		width: 100%;
+	}
+
+	.col {
+		display: inline-block;
+		width: 24%;
+		padding: 5% 0%;
+	}
+		
+	.slide3Image {
+		display: inline-block;
+		width: 60%; 
+		padding: 0 20%;
+	}
+
+/* slide 4 */
+	#slide-4 {
+		background-color: #ff8000;/*#050970;  /*edit*/
+	}
+
+	.row-5 {
+		padding: -10% 30%;
+	}
+
+	.slide4Text {
+		display: inline-block;
+	}
+
+	#start { 
+		display: inline-block;
+		text-decoration: none;
+		box-shadow: inset 0 0.1em 0.1em 0 rgba(0, 0, 0, 0.05);
+		border-radius: 0.35em;
+		padding: 1% 0;
+		margin: 0 1%;
+		width: 10%;
+		font-size: 14px;
+	}
+
+	#hiddenForm {
+		visibility:hidden;
+	}
+
+	#map {
+		margin-top: -2%;
+		height: 400px;
+		z-index:0;
+	}
+
+	.tutorLink {
+		color: grey; /*edit?*/
+		opacity: 0.8;
+		font-family: Impact, Charcoal, sans-serif;
+	}
+	
+	
+	.tutorLink:hover {
+		color: #000099;	
+	}
+	
+	#user_icon2 {
+	display: inline;
+		max-height: 50px;
+		max-width: 50px;
+		
+		float: left;
+		border-radius: 50%;
+		overflow: hidden;
+	margin-top: 5%;
+    margin-left: 1%;
+	margin-right: 1%;
+	margin-bottom: 0;
+}
+
+#user_details {
+	display: inline;
+	float: right;
+}
+
+#profile2 {
+	width: auto;
+}
+
+/* slide 5 */
+	#slide-5 {
+		background-color: #006699;/*#3D0069;  /*edit*/
+		padding: 0;
+		margin: 0;
+		border: 0;
+	}
+	
+	#slide-5  h1{
+		padding-top: 10%;
+		margin: 0;
+	}
+	
+	#ranking {
+		width: 300px;
+		margin: 5% auto;
+		padding: 10px;
+		background-color: rgba(166, 166, 166, 0.2);
+		border-radius: 20px;
+		border: 2px solid white;
+
+	}
+	
+	.rank_user{
+		margin: 15% 5%;
+	}
+
+
+/* slide 6 */
+	#slide-6 {
+		background-color: #595959;/*#2F2F2F;  /*same as cellInfo color*/
+	margin: 0;
+	}
+
+	.row-3 {
+		width: 100%;
+		margin-top: -10%;
+	}
+
+	.smallBox {
+		margin: 1% 14%;
+		width: 70%;
+		display: block;
+		border: solid 1px rgba(0, 0, 0, 0.15);
+		box-shadow: inset 0 0.1em 0.1em 0 rgba(0, 0, 0, 0.05);
+		border-radius: 0.35em;
+		padding: 1%;
+	}
+
+	.bigBox {
+		height: 100px;
+		margin: 0% 14%;
+		width: 68%;
+		border: solid 1px rgba(0, 0, 0, 0.15);
+		box-shadow: inset 0 0.1em 0.1em 0 rgba(0, 0, 0, 0.05);
+		border-radius: 0.35em;
+		padding: 2%;
+	}
+		
+	#submit { 
+		text-decoration: none;
+		box-shadow: inset 0 0.1em 0.1em 0 rgba(0, 0, 0, 0.05);
+		border-radius: 0.35em;
+		padding: 1.5%;
+		width: 20%;
+		margin: 2% 40%;
+		font-size: 14px;
+	}
+
+	.row-3-1 {
+		margin-top: 2%;
+		width: 49%;
+		display: inline-block;
+	}
+
+	.cellInfo {
+		display: inline-block;
+		width: 20%;
+		margin: 0 10%;
+		padding: 0 4%;
+		overflow: hidden;
+		margin-top: 0px;
+		padding-top: 20px;
+		transition: all ease-in-out .5s;
+	}
+
+
+	.cellInfo p {
+		color: #2F2F2F;
+	}
+
+	.cellInfo:hover {
+		color: white;
+		padding-top: 0px; 
+		padding-bottom: 20px;
+	}
+
+	.cellInfo:hover p {
+		color: white;
+	}
+
+	.info {
+		width: 80%;
+		padding: 10%;
+	}
+
+
+
+/* footer */
+	.footer {
+	   background-color: #2F2F2F;
+	   padding: 2%;
+	   
+	}
+	.footer ul{
+		margin-bottom: 20px;
+		margin-left: 20%;
+		margin-right:20%;
+		text-align: center;
+	}
+	.footer > ul li{
+		list-style-type: none;
+		display: inline;
+		color: #b9dae3;
+	}
+	.footer > ul li a{
+		color: #b9dae3;
+	}
+	.footer > ul li a:hover{
+		color: #fff;
+	}
+	
+	.bottomLi {
+		margin: 0 2px 0 2px;
+		
+	}
+	
+	
+	.footerText {
+		font-size: 14px;
+		color: #fff;
+	}
+	
+/*untility*/
+	.one-third{
+		width: 150px;
+	}
+
+	.two-third{
+		width:500px;
+	}
+	
+/* mobile view*/
+	@media screen and (min-width: 961px) and (max-width: 1880px) {
+	}
+	
+	@media screen and (min-width: 961px) and (max-width: 1620px) {
+	}
+	
+	@media screen and (min-width: 961px) and (max-width: 1320px) {
+	}
+	
+	@media screen and (max-width: 960px) {
+		.login{
+			width: 50px;				
+		}
+		
+	
+		.navLink{
+			visibility: hidden;		
+		}
+		.homelogodiv{
+			position: fixed;
+			/*left: 100px;*/
+			margin-left: 10%;
+			top:10px;
+			visibility: hidden;
+			z-index:20;
+		}
+		.mini{
+			visibility: visible;
+			position:fixed;
+			float:left;
+			
+		}		
+		
+		.menu-bar{
+			background-color: transparent;
+		}
+		
+		.dropdown{
+			width: 100%;
+			
+		}
+	}
+
+	@media screen and ( max-width: 736px){
+		.navLink{
+			visibility: hidden;		
+		}
+		
+		.homelogodiv{
+			position: fixed;
+			left: 50px;
+			visibility: hidden;
+			
+		}
+		
+		.mini{
+			visibility: visible;
+			
+		}		
+		
+		#map{
+			width: 94%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		
+		/* slide-1*/
+		#cover{
+			min-width: 50%;
+			margin:25% auto auto 25%;			
+			padding: 0;
+			
+		}
+		
+		/*slide-2*/
+		#leftImg, #rightImg{
+			min-width: 150px;				
+		}
+		
+		#leftImg {
+			margin: 0 0 5% 4%;
+		}
+		#rightImg {
+			margin: 5% 4% 0% 0%;
+		}
+		
+		
+		.pBesideCircleImg{		
+			width: 60%;			
+			padding: 2% 3%;
+			font-size: 1.25em; 			
+		}
+		
+		#rightP{
+			padding: 2% 0% 2% 8%;
+		}
+		#leftP{
+			padding: 2% 0% 2% 4%;
+		} 
+		
+	}
+	
+	@media screen and ( max-width: 450px){
+		
+		
+		/* slide-1*/
+		#cover{
+			min-width: 60%;
+			margin: 40% auto auto 20%;			
+			padding: 0;
+			/*background-color: rgba(0,0,0 ,0.2);*/
+		}
+		
+		/*slide -2 */
+		#leftImg, #rightImg{
+			min-width: 150px;				
+		}
+		
+		#leftImg {
+			margin: 0 0 5% 30%;
+		}
+		#rightImg {
+			margin: 5% 30% 0% 0%;
+		}
+		
+		.pBesideCircleImg{		
+			width: 80%;			
+			padding: 2% 5%;
+			font-size: 1.25em; 			
+		}
+		#rightP{
+			padding: 2% 0% 2% 15%;
+		}
+		#leftP{
+			padding: 2% 10% 2% 3%;
+			border-top-right-radius: 120px;
+			border-bottom-right-radius: 120px;
+		}
+		
+		/* slide 3*/
+		.col{
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			width: 70%;
+		}
+		.col >img{
+			max-width: 50%;
+			margin: 0 auto 2px 5%;
+		}
+		
+		
+	}

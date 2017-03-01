@@ -1,0 +1,63 @@
+.row-5 {
+	margin-top: -5%;
+	padding: -10% 30%;
+	height : 80px;
+}
+
+.slide4Text {
+	display: inline-block;
+	font-size: 25px;
+}
+
+#start { 
+	display: inline-block;
+	text-decoration: none;
+	box-shadow: inset 0 0.1em 0.1em 0 rgba(0, 0, 0, 0.05);
+	border-radius: 0.35em;
+	padding: 1% 0;
+	margin: 0 1%;
+	width: 10%;
+	font-size: 14px;
+}
+
+#hiddenForm {
+	visibility:hidden;
+}
+
+#map {
+	height: 400px;
+}
+
+.tutorLink {
+	font-size: 19px;
+	color: grey; 
+	opacity: 0.8;
+	font-family: Impact, Charcoal, sans-serif;
+}
+
+.tutorLink:hover {
+	color: #000099;	
+}
+
+#user_icon2 {
+	display: inline;
+		max-height: 50px;
+		max-width: 50px;
+		
+		float: left;
+		border-radius: 50%;
+		overflow: hidden;
+	margin-top: 5%;
+    margin-left: 1%;
+	margin-right: 1%;
+	margin-bottom: 0;
+}
+
+#user_details {
+	display: inline;
+	float: right;
+}
+
+#profile2 {
+	width: auto;
+}
